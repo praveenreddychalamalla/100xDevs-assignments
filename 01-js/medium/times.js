@@ -9,5 +9,14 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
+    var sum=0;
+    console.time('tic-toc');
+    for (let index = 1; index <= n; index++) {
+       sum+=index;
+    }
+    console.timeEnd('tic-toc');
     return 0.01;
 }
+calculateTime(100);
+calculateTime(100000);
+calculateTime(10000000000);

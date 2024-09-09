@@ -4,6 +4,26 @@
 */
 
 function isPalindrome(str) {
+  str = str.toLowerCase();
+  var k = Math.floor(str.length/2);
+  var i=0,j=str.length-1;
+  while(i<j){
+    if(!(str.charCodeAt(i)>=97 && str.charCodeAt(i)<=122)){
+      i++;
+    }
+    else if(!(str.charCodeAt(j)>=97 && str.charCodeAt(j)<=122)){
+      j--;
+    }
+    else{
+      if(str[i]!=str[j]){
+        return false;
+      }
+      else{
+        i++;
+        j--;
+      }
+    }
+  }
   return true;
 }
 
